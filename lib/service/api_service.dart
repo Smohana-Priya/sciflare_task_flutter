@@ -3,6 +3,7 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:sciflare_task_flutter/model/user_data_model.dart';
 
 class ApiService {
   final secureStorage = const FlutterSecureStorage();
@@ -20,7 +21,7 @@ class ApiService {
           {"name": name, "email": email, "mobile": mobile, "gender": gender});
 
       var response = await _dio.post(
-        'https://crudcrud.com/api/3dd5f27a16f94897892fae2b91b14dd8/post',
+        'https://crudcrud.com/api/3dd5f27a16f94897892fae2b91b14dd8/user',
         options: Options(
           headers: headers,
         ),
@@ -57,6 +58,24 @@ class ApiService {
     } catch (e) {
       print('Error retrieving API response: $e');
       return null;
+    }
+  }
+
+  Future<List<UserDataModal>> getUsers() async {
+    try {
+      final response = await _dio.get(
+          'https://crudcrud.com/api/3dd5f27a16f94897892fae2b91b14dd8/user');
+
+      if (response.statusCode == 200) {
+        List<dynamic> list = response.data;
+
+        return List<UserDataModal>.from(
+            list.map((model) => UserDataModal.fromJson(model)));
+      } else {
+        throw Exception('Failed to load data');
+      }
+    } catch (e) {
+      throw Exception('Error: $e');
     }
   }
 }
