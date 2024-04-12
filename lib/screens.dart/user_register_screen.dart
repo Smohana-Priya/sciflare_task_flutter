@@ -1,11 +1,13 @@
-// ignore_for_file: avoid_print, deprecated_member_use
+// ignore_for_file: avoid_print, deprecated_member_use, use_build_context_synchronously
 
 import 'dart:convert';
-import 'package:dio/dio.dart';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import '../service/api_service.dart';
 import '../widgets/common_textfield.dart';
+import 'home_screen.dart';
 
 class UserRegisterScreen extends StatefulWidget {
   const UserRegisterScreen({super.key});
@@ -15,6 +17,7 @@ class UserRegisterScreen extends StatefulWidget {
 }
 
 class _UserRegisterScreenState extends State<UserRegisterScreen> {
+  final secureStorage = const FlutterSecureStorage();
   String _name = '';
   String _email = '';
   String _mobile = '';
@@ -30,6 +33,8 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
         gender: _selectedGender,
       );
 
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const HomeScreen()));
       print('User created: $response');
     } catch (error) {
       print('Error creating user: $error');
@@ -211,11 +216,6 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
                         style: ButtonStyle(
                           backgroundColor:
                               MaterialStateProperty.all<Color>(Colors.amber),
-                          // shape: MaterialStateProperty.all<OutlinedBorder>(
-                          //   RoundedRectangleBorder(
-                          //     borderRadius: BorderRadius.circular(20),
-                          //   ),
-                          // ),
                         ),
                         child: const Text(
                           'Create',
@@ -226,7 +226,10 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
                         ),
                       ),
                     ),
-                  )
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
                 ],
               ),
             ),

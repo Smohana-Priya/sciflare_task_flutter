@@ -17,8 +17,11 @@ INJECTED from /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare
 INJECTED from /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/android/app/src/main/AndroidManifest.xml:1:1-44:12
 INJECTED from /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/android/app/src/main/AndroidManifest.xml:1:1-44:12
 MERGED from /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/android/app/src/main/AndroidManifest.xml:1:1-44:12
+MERGED from [:path_provider_android] /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:flutter_secure_storage] /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/build/flutter_secure_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/mohanapriya/.gradle/caches/transforms-3/142c24f2530665bb6deb4123ab140714/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/mohanapriya/.gradle/caches/transforms-3/032f4dff274e516110d9363a9793a3e3/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] /Users/mohanapriya/.gradle/caches/transforms-3/d683ef7a3c9fe7e8f41f14fc2909f336/transformed/jetified-security-crypto-1.1.0-alpha06/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/mohanapriya/.gradle/caches/transforms-3/d16d53746166143fe30054cbfe559e31/transformed/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/mohanapriya/.gradle/caches/transforms-3/aa3cbedcef3ee23bf0d03abede347041/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /Users/mohanapriya/.gradle/caches/transforms-3/73e9214f5c1a2878cad8e78e78318741/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -30,8 +33,8 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/mohanapriya/.gradle/ca
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/mohanapriya/.gradle/caches/transforms-3/108e25f406ecced09f55eceb8d3ad0dc/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/mohanapriya/.gradle/caches/transforms-3/f1c3f56234b634f5187be5722bcbd93c/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.tracing:tracing:1.0.0] /Users/mohanapriya/.gradle/caches/transforms-3/fcf486669bd3283ac86e13b69736f6ad/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/mohanapriya/.gradle/caches/transforms-3/f60403700f351b800f99fbe41d46f246/transformed/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/mohanapriya/.gradle/caches/transforms-3/6668cc85eff5929d44d91f927ab7e655/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/mohanapriya/.gradle/caches/transforms-3/f60403700f351b800f99fbe41d46f246/transformed/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/mohanapriya/.gradle/caches/transforms-3/dada71b7eb51c482d5f3b75ae6e629f5/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/mohanapriya/.gradle/caches/transforms-3/3f96ca76068ab400b494bc7d541ee256/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 INJECTED from /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/android/app/src/debug/AndroidManifest.xml:1:1-7:12
@@ -67,10 +70,16 @@ uses-sdk
 INJECTED from /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/android/app/src/main/AndroidManifest.xml
+MERGED from [:path_provider_android] /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_secure_storage] /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/build/flutter_secure_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-9:53
+MERGED from [:flutter_secure_storage] /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/build/flutter_secure_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-9:53
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/mohanapriya/.gradle/caches/transforms-3/142c24f2530665bb6deb4123ab140714/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/mohanapriya/.gradle/caches/transforms-3/142c24f2530665bb6deb4123ab140714/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/mohanapriya/.gradle/caches/transforms-3/032f4dff274e516110d9363a9793a3e3/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/mohanapriya/.gradle/caches/transforms-3/032f4dff274e516110d9363a9793a3e3/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] /Users/mohanapriya/.gradle/caches/transforms-3/d683ef7a3c9fe7e8f41f14fc2909f336/transformed/jetified-security-crypto-1.1.0-alpha06/AndroidManifest.xml:20:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] /Users/mohanapriya/.gradle/caches/transforms-3/d683ef7a3c9fe7e8f41f14fc2909f336/transformed/jetified-security-crypto-1.1.0-alpha06/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/mohanapriya/.gradle/caches/transforms-3/d16d53746166143fe30054cbfe559e31/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/mohanapriya/.gradle/caches/transforms-3/d16d53746166143fe30054cbfe559e31/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/mohanapriya/.gradle/caches/transforms-3/aa3cbedcef3ee23bf0d03abede347041/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
@@ -93,16 +102,18 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/mohanapriy
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/mohanapriya/.gradle/caches/transforms-3/f1c3f56234b634f5187be5722bcbd93c/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.tracing:tracing:1.0.0] /Users/mohanapriya/.gradle/caches/transforms-3/fcf486669bd3283ac86e13b69736f6ad/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.0.0] /Users/mohanapriya/.gradle/caches/transforms-3/fcf486669bd3283ac86e13b69736f6ad/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/mohanapriya/.gradle/caches/transforms-3/f60403700f351b800f99fbe41d46f246/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/mohanapriya/.gradle/caches/transforms-3/f60403700f351b800f99fbe41d46f246/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/mohanapriya/.gradle/caches/transforms-3/6668cc85eff5929d44d91f927ab7e655/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/mohanapriya/.gradle/caches/transforms-3/6668cc85eff5929d44d91f927ab7e655/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/mohanapriya/.gradle/caches/transforms-3/f60403700f351b800f99fbe41d46f246/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/mohanapriya/.gradle/caches/transforms-3/f60403700f351b800f99fbe41d46f246/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/mohanapriya/.gradle/caches/transforms-3/dada71b7eb51c482d5f3b75ae6e629f5/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/mohanapriya/.gradle/caches/transforms-3/dada71b7eb51c482d5f3b75ae6e629f5/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/mohanapriya/.gradle/caches/transforms-3/3f96ca76068ab400b494bc7d541ee256/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/mohanapriya/.gradle/caches/transforms-3/3f96ca76068ab400b494bc7d541ee256/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 INJECTED from /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/android/app/src/debug/AndroidManifest.xml
 INJECTED from /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/android/app/src/debug/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [:flutter_secure_storage] /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/build/flutter_secure_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:9:9-50
 	android:targetSdkVersion
 		INJECTED from /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/mohanapriya/Documents/workspace/flutter/interviews/sciflare_task_flutter/android/app/src/debug/AndroidManifest.xml
