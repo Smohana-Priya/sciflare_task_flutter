@@ -14,12 +14,10 @@ dependencies:
   cupertino_icons: ^1.0.6
   # for network calling
   dio: ^5.4.2+1
-  
-  # for state managment
-  flutter_bloc: ^8.1.5
-  bloc: ^8.1.4
-  equatable: ^2.0.5
+  # for local database
   flutter_secure_storage: ^9.0.0
+  # for loader
+  flutter_spinkit: ^5.2.1
 
 dev_dependencies:
   flutter_test:

@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:sciflare_task_flutter/model/user_data_model.dart';
 
 import '../service/api_service.dart';
@@ -33,7 +34,10 @@ class _ListOfUsersState extends State<ListOfUsers> {
           future: futureData,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return const CircularProgressIndicator();
+              return const SpinKitSpinningLines(
+                color: Colors.amber,
+                size: 50.0,
+              );
             } else if (snapshot.hasError) {
               return Text('Error: ${snapshot.error}');
             } else {

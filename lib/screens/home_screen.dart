@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:sciflare_task_flutter/screens/list_of_users_screen.dart';
 import '../service/api_service.dart';
 
@@ -61,7 +62,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   }).toList(),
                 ),
               )
-            : const CircularProgressIndicator(),
+            : const SpinKitSpinningLines(
+                color: Colors.amber,
+                size: 50.0,
+              ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: SizedBox(

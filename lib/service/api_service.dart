@@ -21,7 +21,7 @@ class ApiService {
           {"name": name, "email": email, "mobile": mobile, "gender": gender});
 
       var response = await _dio.post(
-        'https://crudcrud.com/api/3dd5f27a16f94897892fae2b91b14dd8/user',
+        'https://crudcrud.com/api/3dd5f27a16f94897892fae2b91b14dd8/userdetails',
         options: Options(
           headers: headers,
         ),
@@ -64,7 +64,7 @@ class ApiService {
   Future<List<UserDataModal>> getUsers() async {
     try {
       final response = await _dio.get(
-          'https://crudcrud.com/api/3dd5f27a16f94897892fae2b91b14dd8/user');
+          'https://crudcrud.com/api/3dd5f27a16f94897892fae2b91b14dd8/userdetails');
 
       if (response.statusCode == 200) {
         List<dynamic> list = response.data;
