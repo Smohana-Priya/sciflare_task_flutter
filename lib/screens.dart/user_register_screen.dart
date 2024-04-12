@@ -1,7 +1,10 @@
 // ignore_for_file: avoid_print, deprecated_member_use
 
+import 'dart:convert';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
+import '../service/api_service.dart';
 import '../widgets/common_textfield.dart';
 
 class UserRegisterScreen extends StatefulWidget {
@@ -17,11 +20,20 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
   String _mobile = '';
   String _selectedGender = '';
   String? _genderError;
-  void _createAccount() {
-    print('Name: $_name');
-    print('Email: $_email');
-    print('Mobile: $_mobile');
-    print('Gender: $_selectedGender');
+  void _createAccount() async {
+    try {
+      var apiService = ApiService();
+      var response = await apiService.createUser(
+        name: _name,
+        email: _email,
+        mobile: _mobile,
+        gender: _selectedGender,
+      );
+
+      print('User created: $response');
+    } catch (error) {
+      print('Error creating user: $error');
+    }
   }
 
   final _formKey = GlobalKey<FormState>();
@@ -101,10 +113,11 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Please enter your mobile number';
-                      }
-
-                      if (value.length != 10 || int.tryParse(value) == null) {
+                      } else if (value.length != 10 ||
+                          int.tryParse(value) == null) {
                         return 'Please enter a valid 10-digit mobile number';
+                      } else if (value.length > 10) {
+                        return 'Mobile number should not exceed 10 digits';
                       }
                       return null;
                     },
@@ -198,13 +211,18 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
                         style: ButtonStyle(
                           backgroundColor:
                               MaterialStateProperty.all<Color>(Colors.amber),
+                          // shape: MaterialStateProperty.all<OutlinedBorder>(
+                          //   RoundedRectangleBorder(
+                          //     borderRadius: BorderRadius.circular(20),
+                          //   ),
+                          // ),
                         ),
                         child: const Text(
                           'Create',
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
-                              fontSize: 18),
+                              fontSize: 19),
                         ),
                       ),
                     ),

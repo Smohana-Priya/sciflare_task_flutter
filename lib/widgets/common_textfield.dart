@@ -33,6 +33,10 @@ class CommonTextField extends StatelessWidget {
             onChanged: onChanged,
             validator: validator,
             decoration: InputDecoration(
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(15),
+                borderSide: const BorderSide(color: Colors.grey),
+              ),
               hintText: hintText!,
               border: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(15))),
