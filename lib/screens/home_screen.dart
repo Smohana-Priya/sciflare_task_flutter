@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:sciflare_task_flutter/const/app_const.dart';
 import 'package:sciflare_task_flutter/screens/list_of_users_screen.dart';
 import '../service/api_service.dart';
 
@@ -36,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Data From Local Database'),
+        title: const Text(AppConstants.dataFromLocal),
       ),
       body: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
         responseData != null
@@ -82,11 +83,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
               ),
               child: const Text(
-                'Get All Users List',
+                AppConstants.getAllUsers,
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
-                    fontSize: 19),
+                    fontSize: 18),
               ),
             ),
           ),

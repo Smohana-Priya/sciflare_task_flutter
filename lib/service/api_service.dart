@@ -5,6 +5,9 @@ import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:sciflare_task_flutter/model/user_data_model.dart';
 
+import '../const/api_const.dart';
+import '../const/app_const.dart';
+
 class ApiService {
   final secureStorage = const FlutterSecureStorage();
   final Dio _dio = Dio();
@@ -17,11 +20,15 @@ class ApiService {
   }) async {
     try {
       var headers = {'Content-Type': 'application/json'};
-      var data = json.encode(
-          {"name": name, "email": email, "mobile": mobile, "gender": gender});
+      var data = json.encode({
+        AppConstants.name: name,
+        AppConstants.email: email,
+        AppConstants.mobile: mobile,
+        AppConstants.gender: gender
+      });
 
       var response = await _dio.post(
-        'https://crudcrud.com/api/3dd5f27a16f94897892fae2b91b14dd8/userdetails',
+        ApiConstants.url,
         options: Options(
           headers: headers,
         ),
@@ -31,9 +38,7 @@ class ApiService {
       if (response.statusCode == 201) {
         final data = json.encode(response.data);
 
-        /// Store the response
-
-        await secureStorage.write(key: 'api_response', value: data);
+        await secureStorage.write(key: AppConstants.storageKey, value: data);
 
         return response.data;
       } else {
@@ -46,7 +51,8 @@ class ApiService {
 
   Future<Map<String, dynamic>?> retrieveApiResponse() async {
     try {
-      String? apiResponse = await secureStorage.read(key: 'api_response');
+      String? apiResponse =
+          await secureStorage.read(key: AppConstants.storageKey);
 
       if (apiResponse != null) {
         Map<String, dynamic> responseData = json.decode(apiResponse);
@@ -64,7 +70,8 @@ class ApiService {
   Future<List<UserDataModal>> getUsers() async {
     try {
       final response = await _dio.get(
-          'https://crudcrud.com/api/3dd5f27a16f94897892fae2b91b14dd8/userdetails');
+        ApiConstants.url,
+      );
 
       if (response.statusCode == 200) {
         List<dynamic> list = response.data;

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:sciflare_task_flutter/const/app_const.dart';
 import 'package:sciflare_task_flutter/model/user_data_model.dart';
 
 import '../service/api_service.dart';
@@ -27,7 +28,7 @@ class _ListOfUsersState extends State<ListOfUsers> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('User List'),
+        title: const Text(AppConstants.userList),
       ),
       body: Center(
         child: FutureBuilder<List<UserDataModal>>(
@@ -39,7 +40,7 @@ class _ListOfUsersState extends State<ListOfUsers> {
                 size: 50.0,
               );
             } else if (snapshot.hasError) {
-              return Text('Error: ${snapshot.error}');
+              return Text('${AppConstants.error}: ${snapshot.error}');
             } else {
               return ListView.builder(
                 itemCount: snapshot.data!.length,
@@ -50,14 +51,18 @@ class _ListOfUsersState extends State<ListOfUsers> {
                         horizontal: 15, vertical: 10),
                     elevation: 3,
                     child: ListTile(
-                      title: Text('Name: ${userData.name ?? ''}'),
+                      title:
+                          Text('${AppConstants.name1}: ${userData.name ?? ''}'),
                       subtitle: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Email: ${userData.email ?? ''}'),
-                          Text('Mobile Number: ${userData.mobile ?? ''}'),
-                          Text('Gender: ${userData.gender ?? ''}'),
-                          Text('ID: ${userData.id ?? ''}'),
+                          Text(
+                              '${AppConstants.email1}: ${userData.email ?? ''}'),
+                          Text(
+                              '${AppConstants.mobileNo}: ${userData.mobile ?? ''}'),
+                          Text(
+                              '${AppConstants.gender1}: ${userData.gender ?? ''}'),
+                          Text('${AppConstants.id}: ${userData.id ?? ''}'),
                         ],
                       ),
                     ),

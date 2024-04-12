@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:sciflare_task_flutter/const/app_const.dart';
 
 import '../service/api_service.dart';
 import '../widgets/common_textfield.dart';
@@ -55,7 +56,7 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
                     height: 30,
                   ),
                   const Text(
-                    "Create Account",
+                    AppConstants.createAccount,
                     style: TextStyle(
                         fontSize: 28,
                         fontWeight: FontWeight.bold,
@@ -66,8 +67,8 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
                     height: 30,
                   ),
                   CommonTextField(
-                    label: 'Name',
-                    hintText: "Enter Name",
+                    label: AppConstants.name1,
+                    hintText: AppConstants.enterName,
                     keyboardType: TextInputType.name,
                     onChanged: (value) {
                       setState(() {
@@ -76,14 +77,14 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
                     },
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter your name';
+                        return AppConstants.pleaseEnterName;
                       }
                       return null;
                     },
                   ),
                   CommonTextField(
-                    label: 'Email',
-                    hintText: "Enter Email Address",
+                    label: AppConstants.email1,
+                    hintText: AppConstants.enterEmail,
                     keyboardType: TextInputType.emailAddress,
                     onChanged: (value) {
                       setState(() {
@@ -92,21 +93,21 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
                     },
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter your email';
+                        return AppConstants.pleaseEnterEmail;
                       }
                       final emailRegex = RegExp(
                         r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
                       );
 
                       if (!emailRegex.hasMatch(value)) {
-                        return 'Please enter a valid email address';
+                        return AppConstants.pleaseEnterValidEmail;
                       }
                       return null;
                     },
                   ),
                   CommonTextField(
-                    label: 'Mobile',
-                    hintText: "Enter Mobile Number",
+                    label: AppConstants.mobile1,
+                    hintText: AppConstants.enterMobileNo,
                     keyboardType: TextInputType.number,
                     onChanged: (value) {
                       setState(() {
@@ -115,12 +116,12 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
                     },
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter your mobile number';
+                        return AppConstants.pleaseEnterMobileNo;
                       } else if (value.length != 10 ||
                           int.tryParse(value) == null) {
-                        return 'Please enter a valid 10-digit mobile number';
+                        return AppConstants.pleaseEnterMobileNo1;
                       } else if (value.length > 10) {
-                        return 'Mobile number should not exceed 10 digits';
+                        return AppConstants.pleaseEnterMobileNo2;
                       }
                       return null;
                     },
@@ -131,7 +132,7 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
                     child: Padding(
                       padding: EdgeInsets.only(left: 20),
                       child: Text(
-                        'Gender',
+                        AppConstants.gender1,
                         style: TextStyle(fontSize: 20),
                       ),
                     ),
@@ -167,7 +168,7 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
                                     decoration: InputDecoration(
                                       hintText: _selectedGender.isNotEmpty
                                           ? _selectedGender
-                                          : "Select Gender",
+                                          : AppConstants.selecGender,
                                       border: InputBorder.none,
                                     ),
                                   ),
@@ -207,7 +208,7 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
                             _createAccount();
                           } else if (_selectedGender.isEmpty) {
                             setState(() {
-                              _genderError = 'Please select your gender';
+                              _genderError = AppConstants.pleaseEnterGender;
                             });
                           }
                         },
@@ -216,7 +217,7 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
                               MaterialStateProperty.all<Color>(Colors.amber),
                         ),
                         child: const Text(
-                          'Create',
+                          AppConstants.create,
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
@@ -248,23 +249,23 @@ class _UserRegisterScreenState extends State<UserRegisterScreen> {
             child: Column(
               children: [
                 ListTile(
-                  title: const Text('Male'),
+                  title: const Text(AppConstants.male),
                   onTap: () {
-                    _selectGender('Male');
+                    _selectGender(AppConstants.male);
                     Navigator.pop(context);
                   },
                 ),
                 ListTile(
-                  title: const Text('Female'),
+                  title: const Text(AppConstants.female),
                   onTap: () {
-                    _selectGender('Female');
+                    _selectGender(AppConstants.female);
                     Navigator.pop(context);
                   },
                 ),
                 ListTile(
-                  title: const Text('Other'),
+                  title: const Text(AppConstants.other),
                   onTap: () {
-                    _selectGender('Other');
+                    _selectGender(AppConstants.other);
                     Navigator.pop(context);
                   },
                 ),
